@@ -1,6 +1,4 @@
-# Atelier Maldonado — Réplica HTML/CSS
-
-Réplica fiel do site [ateliermaldonado.pt](https://www.ateliermaldonado.pt/), construída em HTML e CSS puros, pronta para editar no VS Code.
+# Atelier Cris Passos
 
 ## 📁 Estrutura de ficheiros
 
