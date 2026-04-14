@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+:root {
+  --color-bg: #ebe4df;
+  --color-text: #334a5e;
+  --color-soft: #7f8790;
+  --color-border: #d7cfc8;
+
+  --font: 'Raleway', sans-serif;
+
+  /* largura estilo Maldonado */
+  --site-max-width: 1750px;
+  --site-gutter: 72px;
+
+  --width: min(var(--site-max-width), calc(100vw - (var(--site-gutter) * 2)));
+  --gap: 18px;
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.site-header {
+  padding-top: 110px;
+  padding-bottom: 100px;
+}
+
+.nav {
+  width: var(--width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  letter-spacing: 0.35em;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-link {
+  letter-spacing: 0.14em;
+  font-size: 0.9rem;
+  color: var(--color-soft);
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: var(--color-text);
+}
+
+/* =========================================================
+   MAIN (HOME)
+   ========================================================= */
+.main-content {
+  width: var(--width);
+  margin: 0 auto;
+}
+
+/* GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+}
+
+/* CARD */
+.project-card {
+  width: 100%;
+}
+
+.project-link {
+  display: block;
+}
+
+.project-image {
+  aspect-ratio: 1.78 / 1;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-link:hover img {
+  transform: scale(1.02);
+}
+
+/* =========================================================
+   PROJECT PAGE (INTERNA)
+   ========================================================= */
+
+.project-page {
+  width: var(--width);
+  margin: 0 auto;
+  padding-bottom: 42px;
+}
+
+/* HERO */
+.project-hero {
+  margin-bottom: 18px;
+}
+
+.project-hero img {
+  width: 100%;
+  height: auto;
+}
+
+/* TEXTO */
+.project-copy {
+  width: min(100%, 360px);
+  margin: 44px auto 58px;
+}
+
+.project-heading {
+  margin: 0 0 18px;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-copy p {
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+/* BLOCOS */
+.project-block {
+  margin-bottom: 18px;
+}
+
+.project-block img {
+  width: 100%;
+  height: auto;
+}
+
+/* DUAS VERTICAIS */
+.project-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+}
+
+/* 3 HORIZONTAIS */
+.project-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+}
+
+.project-stack img {
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+}
+
+.about-text {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.about-email {
+  margin-top: 30px;
+  display: inline-block;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: var(--color-soft);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer {
+  width: var(--width);
+  margin: 60px auto;
+  border-top: 1px solid var(--color-border);
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  :root {
+    --site-gutter: 44px;
+    --gap: 16px;
+  }
+
+  .site-header {
+    padding-top: 90px;
+    padding-bottom: 82px;
+  }
+
+  .project-image {
+    aspect-ratio: 1.7 / 1;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --site-gutter: 28px;
+    --gap: 14px;
+  }
+
+  .site-header {
+    padding-top: 72px;
+    padding-bottom: 64px;
+  }
+
+  .nav-logo,
+  .nav-link {
+    font-size: 0.82rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    aspect-ratio: 1.65 / 1;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .project-copy {
+    width: min(100%, 420px);
+  }
+}
+
+@media (max-width: 700px) {
+  :root {
+    --site-gutter: 16px;
+  }
+
+  .site-header {
+    padding-top: 42px;
+    padding-bottom: 38px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .project-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    aspect-ratio: 1.55 / 1;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
