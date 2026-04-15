@@ -1,60 +1,152 @@
-# Atelier Cris Passos
+# 🌿 CP Studio — Architecture Portfolio Website
 
-## 📁 Estrutura de ficheiros
+🔗 Live Website: https://cristianepassos.com/
+
+---
+
+## 📌 Overview
+
+This project is a **modern, minimalist portfolio website** developed for an architecture studio, focused on showcasing high-end residential and interior design projects.
+
+The goal was to create a **clean, elegant and highly visual experience**, aligned with the concept of architecture with identity and meaning.
+
+---
+
+## ✨ Key Features
+
+- 🎨 Minimalist and elegant UI design  
+- 🖼️ Project-based portfolio structure  
+- ⚡ Fast-loading static website  
+- 📱 Responsive layout (desktop & mobile)  
+- 🧩 Modular and scalable structure  
+- 🌐 Deployed with Netlify (CI/CD from GitHub)  
+
+---
+
+## 🛠️ Tech Stack
+
+- HTML5  
+- CSS3  
+- Google Fonts  
+- Netlify (Deployment)  
+- Git & GitHub (Version Control)  
+
+---
+
+## 📁 Project Structure
 
 ```
-ateliermaldonado/
-├── index.html        → Página principal (Work / portfólio)
-├── about.html        → Página About
+atelier-arquitetura/
+├── index.html        # Portfolio (Work)
+├── about.html        # About page
 ├── css/
-│   └── style.css     → Todos os estilos
-├── images/           → Pasta para as imagens dos projetos
+│   └── style.css     # Global styles
+├── images/           # Project assets
 └── README.md
 ```
 
-## 🚀 Como abrir no VS Code
+---
 
-1. Abre o VS Code
-2. **File → Open Folder...** e seleciona a pasta `ateliermaldonado`
-3. Para ver o site no browser: instala a extensão **Live Server** no VS Code e clica em **"Go Live"** no canto inferior direito
+## 🚀 Getting Started (Local Setup)
 
-## 🖼️ Adicionar imagens
+1. Clone the repository:
+```
+git clone https://github.com/robertoslawinski/atelier-arquitetura.git
+```
 
-Os projetos têm placeholders bege enquanto não tiveres as imagens. Para adicionar:
+2. Open the folder in VS Code
 
-1. Coloca os ficheiros de imagem na pasta `/images/`
-2. Os nomes esperados estão no atributo `src` de cada `<img>` no HTML, por exemplo:
-   - `images/caixa_02.jpg` → Hopes & Dreams
-   - `images/BLH_2.jpg` → Hotel Blue
-   - `images/MarianaSabido-14.jpg` → Foto de Inês Maldonado (about.html)
+3. Run with Live Server:
+- Install Live Server extension  
+- Click "Go Live"  
 
-Se quiseres usar imagens com outros nomes, basta alterar o atributo `src` no HTML.
+---
 
-## ✏️ Personalização rápida
+## 🖼️ Image Management
 
-### Mudar cores
-Em `css/style.css`, edita as variáveis no topo:
-```css
+Project images are stored in the `/images` folder.
+
+To update images:
+- Replace files inside `/images`  
+- Or update the `src` path inside HTML files  
+
+Example:
+```
+<img src="images/project-name.jpg" alt="Project description">
+```
+
+---
+
+## 🎨 Customization
+
+### Colors
+
+Edit CSS variables in:
+```
+css/style.css
+```
+
+```
 :root {
-  --color-bg:    #ffffff;   /* fundo */
-  --color-text:  #1a1a1a;   /* texto principal */
-  --color-light: #888888;   /* texto secundário */
+  --color-bg:    #ffffff;
+  --color-text:  #1a1a1a;
+  --color-light: #888888;
 }
 ```
 
-### Mudar fontes
-As fontes vêm do Google Fonts. Podes alterar a linha `@import` no topo do CSS e as variáveis:
-```css
---font-display: 'Cormorant Garamond', serif;
---font-body:    'Raleway', sans-serif;
+---
+
+### Typography
+
+- Headings: Cormorant Garamond  
+- Body: Raleway  
+
+Both loaded via Google Fonts.
+
+---
+
+### Projects
+
+Each project is a reusable component:
+
+```
+<article class="project-card">
 ```
 
-### Adicionar/remover projetos
-Em `index.html`, cada projeto é um bloco `<article class="project-card">`. Podes duplicar, editar ou apagar à vontade.
+You can duplicate, edit, or remove blocks easily.
 
-## 🌐 Tipografia
+---
 
-- **Display / títulos**: Cormorant Garamond (serif elegante)
-- **Corpo / navegação**: Raleway (sans-serif limpo)
+## 🌍 Deployment
 
-Ambas carregadas via Google Fonts — requerem ligação à internet.
+This project is deployed using Netlify with automatic updates from GitHub.
+
+Every push to `main` branch triggers a new deployment.
+
+---
+
+## 🎯 Purpose
+
+This project demonstrates:
+
+- Frontend fundamentals (HTML & CSS)  
+- Clean UI/UX design principles  
+- Real-world client project structure  
+- Deployment and domain configuration  
+- Git workflow and version control  
+
+---
+
+## 👤 Author
+
+**Roberto Sławiński**  
+Full Stack Web Developer  
+
+🔗 https://github.com/robertoslawinski  
+💼 Open to opportunities in Web Development  
+
+---
+
+## 📌 Notes
+
+This is a static website focused on performance, simplicity and visual storytelling — ideal for portfolio-driven businesses.
