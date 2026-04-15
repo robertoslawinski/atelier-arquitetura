@@ -13,9 +13,11 @@
 
   /* largura estilo Maldonado */
   --site-max-width: 1750px;
+  --project-max-width: 1560px;
   --site-gutter: 72px;
 
   --width: min(var(--site-max-width), calc(100vw - (var(--site-gutter) * 2)));
+  --project-width: min(var(--project-max-width), calc(100vw - (var(--site-gutter) * 2)));
   --gap: 18px;
 }
 
@@ -54,8 +56,8 @@ a {
    HEADER
    ========================================================= */
 .site-header {
-  padding-top: 110px;
-  padding-bottom: 100px;
+  padding-top: 68px;
+  padding-bottom: 56px;
 }
 
 .nav {
@@ -67,10 +69,17 @@ a {
 }
 
 .nav-logo {
-  letter-spacing: 0.35em;
-  font-size: 0.9rem;
-  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
 }
+
+.nav-logo img {
+  width: auto;
+  height: 136px;
+  max-width: min(72vw, 760px);
+}
+
 
 .nav-links {
   display: flex;
@@ -121,11 +130,11 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: filter 0.3s ease;
 }
 
 .project-link:hover img {
-  transform: scale(1.02);
+  filter: brightness(0.82);
 }
 
 /* =========================================================
@@ -133,9 +142,18 @@ a {
    ========================================================= */
 
 .project-page {
-  width: var(--width);
+  width: var(--project-width);
   margin: 0 auto;
   padding-bottom: 42px;
+}
+
+.project-page img {
+  max-width: 100%;
+  max-height: 88vh;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 /* HERO */
@@ -144,8 +162,8 @@ a {
 }
 
 .project-hero img {
-  width: 100%;
-  height: auto;
+  display: block;
+  max-height: none;
 }
 
 /* TEXTO */
@@ -173,8 +191,12 @@ a {
 }
 
 .project-block img {
+  display: block;
+}
+
+.project-block-horizontal img {
+  max-height: none;
   width: 100%;
-  height: auto;
 }
 
 /* DUAS VERTICAIS */
@@ -182,6 +204,13 @@ a {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--gap);
+  align-items: start;
+  justify-items: stretch;
+}
+
+.project-pair img {
+  width: 100%;
+  max-height: none;
 }
 
 /* 3 HORIZONTAIS */
@@ -192,8 +221,9 @@ a {
 }
 
 .project-stack img {
+  display: block;
   width: 100%;
-  height: auto;
+  max-height: none;
 }
 
 /* =========================================================
@@ -205,10 +235,20 @@ a {
   gap: 40px;
 }
 
+.about-page .about-layout {
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.about-page .about-content {
+  max-width: 760px;
+}
+
 .about-text {
   font-size: 1.05rem;
   line-height: 1.9;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .about-email {
@@ -250,8 +290,8 @@ a {
   }
 
   .site-header {
-    padding-top: 90px;
-    padding-bottom: 82px;
+    padding-top: 56px;
+    padding-bottom: 46px;
   }
 
   .project-image {
@@ -266,13 +306,17 @@ a {
   }
 
   .site-header {
-    padding-top: 72px;
-    padding-bottom: 64px;
+    padding-top: 48px;
+    padding-bottom: 40px;
   }
 
   .nav-logo,
   .nav-link {
     font-size: 0.82rem;
+  }
+
+  .nav-logo img {
+    height: 110px;
   }
 
   .projects-grid {
@@ -298,8 +342,8 @@ a {
   }
 
   .site-header {
-    padding-top: 42px;
-    padding-bottom: 38px;
+    padding-top: 30px;
+    padding-bottom: 28px;
   }
 
   .nav {
@@ -312,12 +356,21 @@ a {
     gap: 18px;
   }
 
+  .nav-logo img {
+    height: 88px;
+  }
+
   .project-pair {
     grid-template-columns: 1fr;
   }
 
   .project-image {
     aspect-ratio: 1.55 / 1;
+  }
+
+  .project-page img {
+    max-height: none;
+    width: 100%;
   }
 
   .site-footer {
