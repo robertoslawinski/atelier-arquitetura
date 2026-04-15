@@ -73,6 +73,7 @@ a {
   display: inline-flex;
   align-items: center;
   line-height: 1;
+  margin-left: -14px;
 }
 
 .nav-logo img {
@@ -354,6 +355,10 @@ a {
     height: 122px;
   }
 
+  .nav-logo {
+    margin-left: -10px;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -393,6 +398,10 @@ a {
 
   .nav-logo img {
     height: 98px;
+  }
+
+  .nav-logo {
+    margin-left: -6px;
   }
 
   .project-pair {
