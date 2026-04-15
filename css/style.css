@@ -36,9 +36,10 @@ body {
 
 body {
   font-family: var(--font);
+  font-size: 0.9rem;
   font-weight: 300;
   background: var(--color-bg);
-  color: var(--color-text);
+  color: #334a5e;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -92,7 +93,7 @@ a {
   letter-spacing: 0.14em;
   font-size: 0.9rem;
   font-weight: 300;
-  color: var(--color-soft);
+  color: #334a5e;
 }
 
 .nav-link.active,
@@ -147,7 +148,7 @@ a {
 .project-page {
   width: var(--project-width);
   margin: 0 auto;
-  padding-bottom: 42px;
+  padding-bottom: 0;
 }
 
 .project-page img {
@@ -177,7 +178,7 @@ a {
 
 .project-heading {
   margin: 0 0 18px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   letter-spacing: 0.12em;
   font-weight: 300;
   text-transform: uppercase;
@@ -185,7 +186,7 @@ a {
 
 .project-copy p {
   margin: 0 0 16px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 300;
   line-height: 1.9;
 }
@@ -250,7 +251,7 @@ a {
 }
 
 .about-text {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   font-weight: 300;
   line-height: 1.9;
   margin-bottom: 20px;
@@ -264,7 +265,7 @@ a {
   text-transform: uppercase;
   font-size: 0.9rem;
   font-weight: 300;
-  color: var(--color-soft);
+  color: #334a5e;
 }
 
 /* =========================================================
@@ -284,6 +285,10 @@ a {
   width: var(--width);
   margin: 36px auto 0;
   text-align: center;
+}
+
+.project-page + .back-to-top-wrap {
+  margin-top: 18px;
 }
 
 .back-to-top {
@@ -348,7 +353,7 @@ a {
 
   .nav-logo,
   .nav-link {
-    font-size: 0.82rem;
+    font-size: 0.9rem;
   }
 
   .nav-logo img {
