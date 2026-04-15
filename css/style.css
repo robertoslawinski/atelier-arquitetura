@@ -302,7 +302,7 @@ a {
   color: #334a5e;
   letter-spacing: 0.08em;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 .footer-links {
