@@ -19,6 +19,7 @@
   --width: min(var(--site-max-width), calc(100vw - (var(--site-gutter) * 2)));
   --project-width: min(var(--project-max-width), calc(100vw - (var(--site-gutter) * 2)));
   --gap: 18px;
+  --copy-width: 360px;
 }
 
 /* =========================================================
@@ -32,14 +33,14 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background: var(--color-bg);
 }
 
 body {
   font-family: var(--font);
   font-size: 1rem;
   font-weight: 300;
-  background: var(--color-bg);
-  color: #334a5e;
+  color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -93,7 +94,7 @@ a {
   letter-spacing: 0.14em;
   font-size: 1rem;
   font-weight: 300;
-  color: #334a5e;
+  color: var(--color-text);
 }
 
 .nav-link.active,
@@ -172,7 +173,7 @@ a {
 
 /* TEXTO */
 .project-copy {
-  width: min(100%, 360px);
+  width: min(100%, var(--copy-width));
   margin: 44px auto 58px;
 }
 
@@ -237,17 +238,21 @@ a {
    ========================================================= */
 .about-layout {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
-}
-
-.about-page .about-layout {
   grid-template-columns: 1fr;
   gap: 28px;
 }
 
 .about-page .about-content {
   max-width: 760px;
+}
+
+.about-image {
+  overflow: hidden;
+}
+
+.about-image img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
 }
 
 .about-text {
@@ -265,7 +270,7 @@ a {
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 300;
-  color: #334a5e;
+  color: var(--color-text);
 }
 
 /* =========================================================
@@ -299,7 +304,7 @@ a {
   font-family: var(--font);
   font-size: 1rem;
   font-weight: 300;
-  color: #334a5e;
+  color: var(--color-text);
   letter-spacing: 0.08em;
   text-decoration: none;
   text-transform: none;
